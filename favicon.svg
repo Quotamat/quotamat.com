@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Quotamat / Curotech Teal-Emerald Gradient -->
+    <linearGradient id="quotamat-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop id="grad-stop-1" offset="0%" stop-color="#00B4D8" />   <!-- Cyan / Teal -->
+      <stop id="grad-stop-2" offset="50%" stop-color="#0096C7" />  <!-- Mid Teal -->
+      <stop id="grad-stop-3" offset="100%" stop-color="#10B981" /> <!-- Emerald Green -->
+    </linearGradient>
+
+    <!-- Subtle Tech Glow -->
+    <filter id="icon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .q-body, .q-tail {
+        stroke: url(#quotamat-grad);
+        fill: none;
+        stroke-width: 32;
+      }
+
+      /* Dark mode high-contrast adjustments */
+      @media (prefers-color-scheme: dark) {
+        #grad-stop-1 { stop-color: #38BDF8; } /* Bright Cyan */
+        #grad-stop-2 { stop-color: #0EA5E9; } /* Vibrant Blue-Teal */
+        #grad-stop-3 { stop-color: #34D399; } /* Bright Emerald */
+      }
+    </style>
+  </defs>
+
+  <!-- IBM Plex-Style Geometric 'Q' Icon for Quotamat -->
+  <g filter="url(#icon-glow)" stroke-linecap="square" stroke-linejoin="miter">
+    <!-- Main Oval Body (IBM Plex Sans Grotesque 'Q') -->
+    <path class="q-body" 
+          d="M 250 80 
+             C 150 80, 110 130, 110 240 
+             C 110 350, 150 400, 250 400 
+             C 350 400, 390 350, 390 240 
+             C 390 130, 350 80, 250 80 Z" />
+
+    <!-- Waveform Signal Tail (Cutting across the lower-right bowl) -->
+    <path class="q-tail" 
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M 290 280 
+             L 335 325 
+             L 360 300 
+             L 420 375" />
+  </g>
+</svg>
